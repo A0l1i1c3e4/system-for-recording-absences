@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Мои пропуска</title> 
+    <link rel="stylesheet" type="text/css" href="/styles/passcreat2.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+</head> 
+<body>  
+    <header> 
+        <div class="log">
+            <a href="#" class="namestyle">Lorem ipsum</a>
+            <a href="http://127.0.0.1:5500/pages/main.html"class="return">Главная</a> 
+            <!--<a href="http://127.0.0.1:5500/pages/creater.html"class="return">Создать пропуск</a>-->
+        </div> 
+        <span type="submit" id="in">Вход</span>
+        <div id="userMenu" style="display: none">
+            <button id="profileButton">Профиль</button>
+            <button id="logoutButton">Выход</button>
+        </div>
+    </header> 
+ 
+    <main> 
+        <div>
+            <div class="passes-title">
+                <span>Список ваших пропусков</span>
+                <button id="create-pass">
+                    <span>Создать новый</span>
+                </button>
+            </div>
+            <div class="profile-form">
+                
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
+        <form class="modal" id="modal"> 
+            <div class="modal-title">
+                <label></label>
+            </div>
+            <div class="modal-fields">
+                <label for="modal-fields">Начальная дата</label>
+                <input type="date" id="modal-start-date">
+                <small></small>
+                </br>
+                <label for="modal-fields">Конечная дата</label>
+                <input type="date" id="modal-end-date">
+                <small></small>
+                </br>
+                <label for="modal-fields">Причина</label>
+                <input type="text" id="modal-reason-field">
+                <small></small> 
+                </br>
+                <div class="pick-classes" style="display:none">
+                    <label for="modal-fields">Какие пары пропустите?</label>
+                    <span>1</span>
+                    <input type="checkbox" name="classes" value="1">
+                    <span>2</span>
+                    <input type="checkbox" name="classes" value="2">
+                    <span>3</span>
+                    <input type="checkbox" name="classes" value="3">
+                    <span>4</span>
+                    <input type="checkbox" name="classes" value="4">
+                    <span>5</span>
+                    <input type="checkbox" name="classes" value="5">
+                    <span>6</span>
+                    <input type="checkbox" name="classes" value="6">
+                    <span>7</span>
+                    <input type="checkbox" name="classes" value="7">
+                </div>
+                <small id="classes-alert"></small>
+            </div>
+            <div class="create-buttons">
+                <button class="cancel" id="create-cancel">Отмена</button>
+                <button class="save" id="create-save">Сохранить</button>
+            </div>
+        </form>
+
+    </main> 
+ 
+    <footer> 
+        <div class="foottext">
+        © AD IMPOSSIBILIA NEMO TENETUR
+        </div>
+    </footer> 
+    <script type="text/javascript" src="/scripts/passcreat2.js"></script>
+</body> 
+</html>

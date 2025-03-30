@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Профиль</title> 
+    <link rel="stylesheet" type="text/css" href="/styles/profile.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+</head> 
+<body> 
+    <header> 
+        <div class="log">
+            <a href="#" class="namestyle">Lorem ipsum</a>
+            <a href="http://127.0.0.1:5500/pages/main.html"class="return">Главная</a> 
+            <!--<a href="http://127.0.0.1:5500/pages/creater.html"class="return">Создать пропуск</a>-->
+        </div> 
+        <span type="submit"  id="in">Вход</span>
+        <div id="userMenu" style="display: none">
+            <button id="profileButton">Профиль</button>
+            <button id="logoutButton">Выход</button>
+        </div>
+    </header> 
+ 
+    <main> 
+        <div class="profile-form">
+            <div class="field" >
+                <label for="email">Email</label> 
+                <input type="email" id="email" placeholder="Nexrpe@kreosoft.ru">
+            </div> 
+            <div class="field" >
+                <label for="fio">ФИО</label> 
+                <input type="text" id="fio" placeholder="Иванов Иван Иванович"> 
+            </div>
+            <div class="field" >
+                <label for="phone">Номер телефона</label> 
+                <input type="tel" id="phone" placeholder="+7 (800) 555-35-35"> 
+            </div>
+            <div class="field" >
+                <label for="role">Роль</label> 
+                <select id="role"> 
+                    <option value="СТУДЕНТ">Студент</option> 
+                    <option value="ПРЕПОДАВАТЕЛЬ">Преподаватель</option> 
+                    <option value="ДЕКАНАТ">Деканат</option> 
+                </select> 
+            </div>
+            <!--<button type="submit" id="save">Сохранить</button> -->
+        </div> 
+    </main> 
+ 
+    <footer> 
+        <div class="foottext">
+        © AD IMPOSSIBILIA NEMO TENETUR
+        </div>
+    </footer> 
+    <script type="text/javascript" src="/scripts/profile.js"></script>
+</body> 
+</html>

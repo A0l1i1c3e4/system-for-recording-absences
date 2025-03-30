@@ -1,0 +1,191 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.return {
+    margin-left: 15px;
+}
+.log {
+    justify-content: start;
+    margin-left: 1%;
+}
+
+.namestyle{
+    font-family: lobster;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+#userMenu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 2%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 80px;
+}
+
+#userMenu button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0;
+    text-align: left; /*Изменено на left */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#loginButton{
+    position: relative;
+    padding: 8px 8px;
+    border: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-right:1%;
+}
+
+footer { 
+    background-color: #ececec; 
+    padding: 10px; 
+    text-align: start; 
+    font-size: 16px; 
+    color: #666; 
+    border-top: 1px solid #ccc; 
+} 
+.foottext {   
+    margin-left:5%;  
+    font-family: caviet;
+} 
+
+.PaginachionContainer{  
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: auto;
+    border: none;
+    background-color: white; 
+    width:75%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    
+  }
+  #Paginachion{
+    margin-bottom: 0;
+    background-color: #f4f4f4;
+  }
+  .PaginachionContainer button{
+    background-color: #fff;
+    color: #106ef5;
+    border: 1px solid #106ef5;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+  }
+  #button4{
+    background-color: #106ef5;
+    color: #fff;
+    
+  }
+  #passcount{
+    margin-left: auto;
+    margin-right: 10px;
+    width: 50px;
+  }
+  
+
+  .filter-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+.users-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.name, .login, .phone{
+    margin-bottom: 0.3  rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+.approve, .decline {
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;  
+    color: white;
+    cursor: pointer;
+}
+
+.approve {
+    background-color: #346cb0;
+}
+
+.approve:hover {
+    background-color: #2b5a92;
+}
+
+.decline {
+    margin-left: 1rem;
+    background-color: #6c757d;
+}
+
+.decline:hover{
+    background-color: #616971;
+}
+
+.user {
+    display: flex;
+}
+.user:not(:last-child) {
+    margin-bottom: 2rem;
+}

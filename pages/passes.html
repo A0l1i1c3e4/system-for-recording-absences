@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/passes.css" />
+    <title>Список пропусков</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+</head>
+<body>
+    <header>
+        <div class="log">
+          <a href="#" class="namestyle">Lorem ipsum</a>
+            <a href="http://127.0.0.1:5500/pages/main.html" class="return">Главная</a>
+            <a href="http://127.0.0.1:5500/pages/users.html" class="return" id="users">Пользователи</a>
+            <a href="http://127.0.0.1:5500/pages/passcreat2.html" class="return" id="newPass">Создать новый пропуск</a>
+            <a onclick=Export() class="return" id="Export">Export file</a>
+        </div>
+        <span type="submit"  id="loginButton">Вход</span>
+
+        <div id="userMenu" style="display: none">
+            <button id="profileButton">Профиль</button>
+            <button id="logoutButton">Выход</button>
+        </div>
+    </header> 
+    <main>
+      <div class="filter-container">
+        <h2>Фильтры</h2>
+
+        <div class="filter-section">
+          <div class="filter-row">
+            <div class="filter-column">
+              <label for="author-search">Поиск по имени автора:</label>
+              <input type="text" id="author-search">
+            </div>
+            <div class="filter-column">
+              <label for="classSearch">Поиск по парам:</label>
+              <select id="topicSelector" size="4"> 
+                <option value="" selected>Любая</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select> 
+            </div>
+            
+          </div>
+          <div class="filter-row">
+            <div class="filter-column">
+              <label for="sort-by">Сортировать:</label>
+              <select id="sort-by"> 
+                <option value="DESC" selected>по дате создания (сначала новые)</option>
+                <option value="ASC">по дате создания (сначала старые)</option>
+              </select>
+            </div>
+            <div class="filter-column_a">
+              <label type="timeRied">Дата создания:</label>
+              <input type="date" id="startDate">
+            </div>
+            <div class="filter-column_a">
+              <label type="timeRied">Дата закрытия:</label>
+              <input type="date" id="endDate">
+            </div>
+          <div class="filter-row" id="isAppruved-row">
+            <input type="checkbox" id="isAppruved">
+            <label for="isAppruved">Только подтверждённые</label>
+          </div>
+            <button class="filter-button", id="filter-button">Применить</button>
+          </div>
+        </div>
+      </div>
+      <div id="pass-container">
+        <template id="pass-template">
+          <div class="pass-block">
+            <div class="author-info"></div>
+            
+            <div class="filter-row">
+              <div class="title"></div>
+              <div class="img"><img src="https://pngicon.ru/file/uploads/zelenaja-galochka.png" alt="" class="img"></div>
+            </div>
+            <div class="description"></div>
+            <div class="lessons"></div>
+            
+            <div class="filter-row">
+              <div class="startDate"></div>
+              <div class="endDate"></div>
+            </div>
+            <!--<div class="status">
+              <div class="comments">
+                <div class="commentscount"></div>
+                <img src="https://sun9-27.userapi.com/impg/vgoMN5oScXPnvFqt7Doh6diyZSx8Bn1r7VpYqw/6lD7O9BOy6o.jpg?size=180x135&quality=95&sign=4c9bb0a8143a7514320b9491086927ff&type=album">
+              </div>
+              <div class="like">
+                <div class="likescount"></div>
+                <img src="https://sun9-6.userapi.com/impg/zl2ZrpkSFaffSLnDMJ2hgkrBwW8Q_IFHp1K9SQ/hg019m1fCik.jpg?size=512x512&quality=95&sign=138593f04c7f535c97dfebd6c1bf7374&type=album">
+              </div>
+            </div>-->
+          </div>
+        </template>
+      </div>
+      <div class="PaginachionContainer" >
+        <div class="filter-row" id="Paginachion">
+          <div id="PaginachionContainer"></div>
+          <input type="number" id="passcount" value="5">
+        </div>
+      </div>
+      
+
+    </main> 
+ 
+    <footer> 
+        <div class="foottext">
+        © AD IMPOSSIBILIA NEMO TENETUR
+        </div>
+    </footer> 
+    <script type="text/javascript" src="/scripts/passes.js"></script>
+</body> 
+</html>

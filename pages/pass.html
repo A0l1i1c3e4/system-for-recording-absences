@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/pass.css" />
+    <title>Просмотр пропуска</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+</head>
+<body>
+    <header>
+        <div class="log">
+          <a href="#" class="namestyle">Lorem ipsum</a>
+            <a href="http://127.0.0.1:5500/pages/main.html" class="return">Главная</a>
+            <a href="http://127.0.0.1:5500/pages/passes.html" class="return">Пропуска</a>
+            <a onclick=Export() class="return" id="Export">Export file</a>
+        </div>
+        <span type="submit"  id="loginButton">Вход</span>
+
+        <div id="userMenu" style="display: none">
+            <button id="profileButton">Профиль</button>
+            <button id="logoutButton">Выход</button>
+        </div>
+    </header> 
+    <main>
+      <div id="pass-container">
+        <template id="pass-template">
+          <div class="pass-block">
+            <div class="author-info"></div>
+            <div class="filter-row">
+              <div class="title">Статус:</div>
+              <div class="img"><img src="https://pngicon.ru/file/uploads/zelenaja-galochka.png" alt="" class="img"></div>
+            </div>
+            <div class="description"></div>
+            <div class="lessons"></div>
+            <div class="filter-row">
+              <div class="filter-column_a">
+                <label type="timeRied">Дата создания:</label>
+                <input type="date" class="startDate" id="startDate">
+              </div>
+              <div class="filter-column_a">
+                <label type="timeRied">Дата закрытия:</label>
+                <input type="date" class="endDate" id="endDate">
+              </div>
+            </div>
+            <div class="filter-row">
+              <button onclick=status("APPROVED") class="APPROVEDBTN">Одобрить</button>
+              <button onclick=status("REJECTED") class="REJECTEDBTN">Отклонить</button>
+              <button onclick=dates() class="datesBTN">Изменить даты</button>
+              <a href="http://127.0.0.1:5500/pages/docs.html" class="docs">Добавить документ</a>
+            </div>
+          </div>
+        </template>
+      </div>    
+
+    </main> 
+ 
+    <footer> 
+        <div class="foottext">
+        © AD IMPOSSIBILIA NEMO TENETUR
+        </div>
+    </footer> 
+    <script type="text/javascript" src="/scripts/pass.js"></script>
+</body> 
+</html>

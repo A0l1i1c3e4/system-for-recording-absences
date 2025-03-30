@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список пользователей</title>
+    <link rel="stylesheet" href="/styles/users.css">
+</head>
+<body>
+    <header>
+        <div class="log">
+            <a href="#">Lorem ipsum</a>
+            <a href="http://127.0.0.1:5500/pages/main.html" class="return">Главная</a>
+            <a href="http://127.0.0.1:5500/pages/passes.html" class="return">Пропуска</a>
+        </div>
+        <span type="submit"  id="in">Вход</span>
+        <div id="userMenu" style="display: none">
+          <button id="profileButton">Профиль</button>
+          <button id="logoutButton">Выход</button>
+        </div>
+    </header>
+    <main id="user-container">
+        <template id="user-template">
+            <div class="user-block">
+                <img src="" alt="">
+                <div class="user-info">
+                    <div class="name"></div>
+                    <p class="phone">Телефон: </p>
+                </div>
+                <div class="user-stats">
+                    <div class="login"></div>
+                    <div class="password"></div>
+                </div>
+            </div>
+        </template>
+    </main>
+    <div class="PaginachionContainer" >
+        <div class="filter-row" id="Paginachion">
+          <div id="PaginachionContainer"></div>
+          <input type="number" id="passcount" value="5">
+        </div>
+    </div>
+    <footer>
+        <div class="foottext">© 2024 - Блог №001</div>
+    </footer>
+    <script src="/scripts/users.js"></script>
+</body>
+</html>
